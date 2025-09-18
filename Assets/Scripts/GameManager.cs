@@ -11,7 +11,7 @@ public class GameManager : MonoBehaviour
 
     public void AddPoint()
     {
-        points++;
+        points += 10;
         UpdateUI();
     }
 
