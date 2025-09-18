@@ -48,7 +48,7 @@ public class OnClickLeuka : MonoBehaviour
 
     }
 
-    void UpdateMoneyUI()
+    public void UpdateMoneyUI()
     {
         moneyText.text = "Raha: " + money.ToString() + "€";
     }
