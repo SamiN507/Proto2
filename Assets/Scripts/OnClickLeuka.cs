@@ -3,7 +3,7 @@ using TMPro;
 
 public class OnClickLeuka : MonoBehaviour
 {
-
+        public GameManager gameManager;
         private Animator animator;
         public int money = 0;
         public TextMeshProUGUI moneyText;
@@ -43,9 +43,13 @@ public class OnClickLeuka : MonoBehaviour
             UpdateMoneyUI();
             Debug.Log("Clicked!");
             animator.SetTrigger("PlayAnim");
+
             GetComponent<ChinupEvents>().OnChinup();
 
-        }
+        if (gameManager != null)
+            gameManager.AddPoint();
+
+    }
 
     void UpdateMoneyUI()
     {
