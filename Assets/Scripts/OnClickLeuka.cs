@@ -46,9 +46,6 @@ public class OnClickLeuka : MonoBehaviour
 
             GetComponent<ChinupEvents>().OnChinup();
 
-        if (gameManager != null)
-            gameManager.AddPoint();
-
     }
 
     void UpdateMoneyUI()
