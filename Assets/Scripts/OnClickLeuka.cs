@@ -1,13 +1,18 @@
 using UnityEngine;
+using TMPro;
 
 public class OnClickLeuka : MonoBehaviour
 {
 
         private Animator animator;
+        public int money = 0;
+        public TextMeshProUGUI moneyText;
 
     void Start()
     {
         animator = GetComponent<Animator>();
+        UpdateMoneyUI();
+
 
         if (animator == null)
             Debug.LogWarning("No Animator attached to " + gameObject.name);
@@ -34,8 +39,16 @@ public class OnClickLeuka : MonoBehaviour
 
     void OnMouseDown()
         {
+            money += 1;
+            UpdateMoneyUI();
             Debug.Log("Clicked!");
             animator.SetTrigger("PlayAnim");
+
         }
-    
+
+    void UpdateMoneyUI()
+    {
+        moneyText.text = "Raha: " + money.ToString() + "€";
+    }
+
 }
