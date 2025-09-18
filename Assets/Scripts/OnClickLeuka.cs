@@ -43,6 +43,7 @@ public class OnClickLeuka : MonoBehaviour
             UpdateMoneyUI();
             Debug.Log("Clicked!");
             animator.SetTrigger("PlayAnim");
+            GetComponent<ChinupEvents>().OnChinup();
 
         }
 
