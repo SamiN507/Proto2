@@ -5,7 +5,7 @@ using TMPro;
 public class MoneyUpgradeButton : MonoBehaviour
 {
     public GameManager gameManager;
-    public int cost = 100;
+    public int cost = 75;
     public int extraMoneyPerClick = 1;
     public Button button;
     public TextMeshProUGUI costText;
