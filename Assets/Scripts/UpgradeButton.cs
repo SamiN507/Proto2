@@ -20,12 +20,12 @@ public class UpgradeButton : MonoBehaviour
 
     void BuyUpgrade()
     {
-        if (playerClicker.money >= cost)
+        if (playerClicker.gameManager.money >= cost)
         {
-            playerClicker.money -= cost;
-            playerClicker.UpdateMoneyUI();
+            playerClicker.gameManager.money -= cost;
 
             playerClicker.gameManager.pointsPerClick += extraPoints;
+            playerClicker.gameManager.AddPoint();
 
             cost += 25;
             UpdateCostText();
