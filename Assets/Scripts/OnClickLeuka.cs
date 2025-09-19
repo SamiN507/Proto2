@@ -37,7 +37,7 @@ public class OnClickLeuka : MonoBehaviour
         }
     }
 
-    void OnMouseDown()
+    void OnMouseDown() // Tähän Vois tehdä Sellasen että siinä Olis Semmonen Ajastin Milloin Voi Klikata Uudelleen
         {
             money += 1;
             UpdateMoneyUI();
