@@ -5,13 +5,10 @@ public class OnClickLeuka : MonoBehaviour
 {
         public GameManager gameManager;
         private Animator animator;
-        public int money = 0;
-        public TextMeshProUGUI moneyText;
 
     void Start()
     {
         animator = GetComponent<Animator>();
-        UpdateMoneyUI();
 
 
         if (animator == null)
@@ -39,18 +36,12 @@ public class OnClickLeuka : MonoBehaviour
 
     void OnMouseDown() // Tähän Vois tehdä Sellasen että siinä Olis Semmonen Ajastin Milloin Voi Klikata Uudelleen
         {
-            money += 1;
-            UpdateMoneyUI();
             Debug.Log("Clicked!");
             animator.SetTrigger("PlayAnim");
 
-            GetComponent<ChinupEvents>().OnChinup();
+            if (gameManager != null)
+                gameManager.AddPoint();
 
-    }
-
-    public void UpdateMoneyUI()
-    {
-        moneyText.text = "Raha: " + money.ToString() + "€";
-    }
+        }
 
 }
