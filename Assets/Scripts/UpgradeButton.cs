@@ -41,6 +41,6 @@ public class UpgradeButton : MonoBehaviour
     void UpdateCostText()
     {
         if (costText != null)
-            costText.text = $"Upgrade (+{extraPoints} pisteet) - {cost}€";
+            costText.text = $"Upgrade Leuka cost: {cost}€";
     }
 }
